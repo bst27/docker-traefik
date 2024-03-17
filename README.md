@@ -32,7 +32,7 @@ services:
       - 'traefik.http.routers.my-app-php.rule=Host(`www.example.com`)'
       - 'traefik.http.routers.my-app-php.entrypoints=websecure'
       - 'traefik.http.routers.my-app-php.tls.certresolver=myresolver'
-      - 'traefik.http.services.php.loadbalancer.server.port=80'
+      - 'traefik.http.services.my-app-php.loadbalancer.server.port=80'
     networks:
       - traefik-network
       
