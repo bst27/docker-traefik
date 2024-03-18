@@ -45,7 +45,8 @@ If you want to add a new docker compose app and use Traefik for certificate hand
 simply have to define the labels and networks in the projects own `docker-compose.production.yml` file as shown
 in the example above and adapt is slightly. When the app is started on the production machine where Traefik is
 already running Traefik will automatically detect the relevant docker container, create a certificate using
-Lets Encrypt and start redirecting traffic to the newly deployed app.
+Lets Encrypt and start redirecting traffic to the newly deployed app. For this to work make sure to set up
+corresponding DNS records so that the Lets Encrypt certificates can automatically obtained.
 
 # Staging Setup
 If you first want to test this setup without having Traefik aquire real certificates from Lets Encrypt
